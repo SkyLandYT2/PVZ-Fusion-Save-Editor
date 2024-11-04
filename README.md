@@ -1,5 +1,5 @@
 
-# Plant Vs Fusion Save Editor
+# Plants Vs Fusion Save Editor
 
 ## Features
 
@@ -15,6 +15,7 @@ Open the website https://skylandyt2.github.io/PVZ-Fusion-Save-Editor/
 1. **Loading a Save File**:
    - Click the "Choose File" button.
    - Select your JSON save file (e.g., `playerData.json`) to load game data.
+   - (You cand find your save file in C:\Users\*PCUSERNAME*\AppData\LocalLow\LanPiaoPiao\PlantsVsZombiesRH
 
 2. **Viewing Levels**:
    - After loading, the tool displays icons representing various levels:
