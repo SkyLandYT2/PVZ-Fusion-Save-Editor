@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактор сохранения игры</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4a90e2, #50e3c2);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        #fileInput {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        #levels {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .level {
+            width: 120px;
+            height: 120px;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .level img {
+            width: 120px;
+            height: 120px;
+            border-radius: 5px;
+            display: block;
+            margin: 0;
+        }
+
+        .selected {
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            background-color: rgba(0, 255, 0, 0.3);
+            z-index: 1;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4a90e2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+		#advLevelInputContainer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px; /* Расстояние между кнопками и полем ввода */
+			margin: 20px 0;
+		}
+
+		#advLevelInputContainer button {
+			padding: 10px;
+			font-size: 16px;
+			color: #fff;
+			background-color: #4a90e2;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		#advLevelInputContainer button:hover {
+			background-color: #357ab8;
+		}
+
+		#advLevelInput {
+			padding: 10px;
+			font-size: 16px;
+			width: 60px;
+			text-align: center;
+			border: 2px solid #4a90e2;
+			border-radius: 5px;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+    </style>
+</head>
+<body>
+    <h1>Plants vs Zombies Fusion Save Editor</h1>
+    <input type="file" id="fileInput" accept=".json">
+	<div id="advLevelContainer">
+		<p style="text-align: center; font-size: 18px; font-weight: bold;">Adventure Levels</p>
+		<div id="advLevelInputContainer">
+			<button id="decreaseButton">-</button>
+			<input type="text" id="advLevelInput" value="0" readonly style="padding: 10px; font-size: 16px; width: 60px; text-align: center;" />
+			<button id="increaseButton">+</button>
+		</div>
+	</div>
+
+
+
+
+    <div id="levels"></div>
+    <button onclick="submitChanges()">Сохранить</button>
+    <script src="script.js"></script>
+	<p>Developed by <a href="https://github.com/SkyLandYT2" target="_blank" style="color: #ffffff; text-decoration: none;">SkyLandYT2</a></p>
+
+</body>
+</html>
